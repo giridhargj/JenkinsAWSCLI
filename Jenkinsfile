@@ -8,9 +8,9 @@ node {
        // Clone repo
 	git branch: 'master', 
 	url: 'https://github.com/giridhargj/JenkinsAWSCLI.git'
-    def BRANCH = sh(returnStdout: true, script: 'git rev-parse --abbrev-ref HEAD').trim()
+    
     echo "After checkout"
-    echo ${BRANCH}
+    
     echo "After checkout 11111"
     }
     stage('ReadParamsFile') {

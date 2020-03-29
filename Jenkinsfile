@@ -12,7 +12,11 @@ node {
     def useVersion = env.VERSION
     def cfnBucketName = ""
     stage('Checkout') {
-        checkoutCode(useEnvironment)
+       // Clone repo
+	git branch: 'master', 
+	url: 'https://github.com/giridhargj/JenkinsAWSCLI.git'
+    def BRANCH = sh(returnStdout: true, script: 'git rev-parse --abbrev-ref HEAD').trim()
+    echo ${BRANCH}
     }
     stage('ReadParamsFile') {
 		def props = readJSON file: "parameters/${useEnvironment}.json"

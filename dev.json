@@ -1,6 +1,6 @@
 [
     {
         "ParameterKey": "BucketName",
-        "ParameterValue": "test"
+        "ParameterValue": "s3test"
     }
 ]

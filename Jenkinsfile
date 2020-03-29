@@ -11,6 +11,7 @@ node {
     def BRANCH = sh(returnStdout: true, script: 'git rev-parse --abbrev-ref HEAD').trim()
     echo "After checkout"
     echo ${BRANCH}
+    echo "After checkout 11111"
     }
     stage('ReadParamsFile') {
 		def props = readJSON file: "parameters/${useEnvironment}.json"

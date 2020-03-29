@@ -1,11 +1,3 @@
-def checkoutCode(def environment) {
-    if (environment != '') {
-        checkout([$class: 'GitSCM', branches: [[name: "*/${environment}"]], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'github', url: 'https://github.com/giridhargj/JenkinsAWSCLI.git']]])
-    } else {
-        checkout scm
-    }
-}
-
 node {
     def useEnvironment = env.ENVIRONMENT
     def serviceName = env.SERVICE_NAME

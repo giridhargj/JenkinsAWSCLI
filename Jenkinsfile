@@ -4,6 +4,7 @@ node {
     def useVersion = env.VERSION
     def cfnBucketName = ""
     stage('Checkout') {
+    echo "in checkout"
        // Clone repo
 	git branch: 'master', 
 	url: 'https://github.com/giridhargj/JenkinsAWSCLI.git'
